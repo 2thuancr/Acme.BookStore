@@ -1,4 +1,4 @@
-using Acme.BookStore.Localization;
+﻿using Acme.BookStore.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.FeatureManagement;
@@ -45,13 +45,14 @@ public class BookStoreDomainSharedModule : AbpModule
         Configure<AbpLocalizationOptions>(options =>
         {
             options.Resources
-                .Add<BookStoreResource>("en")
+                .Add<BookStoreResource>("vi")
                 .AddBaseTypes(typeof(AbpValidationResource))
                 .AddVirtualJson("/Localization/BookStore");
 
             options.DefaultResourceType = typeof(BookStoreResource);
             
-            options.Languages.Add(new LanguageInfo("en", "en", "English")); 
+            options.Languages.Add(new LanguageInfo("vi", "vi", "Tiếng Việt")); 
+            options.Languages.Add(new LanguageInfo("en", "en", "English"));
             options.Languages.Add(new LanguageInfo("en-GB", "en-GB", "English (United Kingdom)")); 
             options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文")); 
             options.Languages.Add(new LanguageInfo("es", "es", "Español")); 
