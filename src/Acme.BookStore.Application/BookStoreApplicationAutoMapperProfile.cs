@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Acme.BookStore.Books;
+using Acme.BookStore.Categories;
 
 
 namespace Acme.BookStore;
@@ -11,6 +12,11 @@ public class BookStoreApplicationAutoMapperProfile : Profile
 
         CreateMap<Book, BookDto>();
         CreateMap<CreateUpdateBookDto, Book>();
+
+        CreateMap<Category, CategoryDto>();
+        CreateMap<CreateCategoryDto, CategoryDto>();
+        CreateMap<UpdateCategoryDto, CategoryDto>();
+
         /* You can configure your AutoMapper mapping configuration here.
          * Alternatively, you can split your mapping configurations
          * into multiple profile classes for a better organization. */
