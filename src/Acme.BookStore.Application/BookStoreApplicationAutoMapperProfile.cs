@@ -14,8 +14,8 @@ public class BookStoreApplicationAutoMapperProfile : Profile
         CreateMap<CreateUpdateBookDto, Book>();
 
         CreateMap<Category, CategoryDto>();
-        CreateMap<CreateCategoryDto, CategoryDto>();
-        CreateMap<UpdateCategoryDto, CategoryDto>();
+        CreateMap<CreateCategoryDto, Category>();
+        CreateMap<UpdateCategoryDto, Category>();
 
         /* You can configure your AutoMapper mapping configuration here.
          * Alternatively, you can split your mapping configurations

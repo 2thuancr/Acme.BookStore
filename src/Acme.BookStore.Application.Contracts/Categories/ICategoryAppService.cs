@@ -10,6 +10,11 @@ namespace Acme.BookStore.Categories
 {
     public interface ICategoryAppService : IApplicationService
     {
+        /// <summary>
+        /// Gets a paginated list of categories based on the input criteria.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         Task<PagedResultDto<CategoryDto>> GetListAsync(CategoryGetListDto input);
 
         Task<CategoryDto> GetAsync(Guid id);
