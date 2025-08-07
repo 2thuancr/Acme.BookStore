@@ -28,6 +28,12 @@ function configureRoutes(routes: RoutesService) {
         parentName: '::Menu:BookStore',
         layout: eLayoutType.application,
       },
+      {
+        path: '/categories',
+        name: '::Menu:Categories',
+        parentName: '::Menu:BookStore',
+        layout: eLayoutType.application,
+      },
     ]);
   };
 }
